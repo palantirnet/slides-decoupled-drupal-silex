@@ -75,6 +75,10 @@
       margin-top: 2em;
     }
 
+    .highlight-text {
+      color: #9fc855;
+    }
+
     </style>
 
   </head>
@@ -419,8 +423,8 @@
             <p>A Program is publishable when:</p>
             <ul>
               <li class="fragment">It is curatorially approved</li>
-              <li class="fragment">Actually it's a bit more complex than that</li>
             </ul>
+            <p class="fragment">Actually it's a bit more complex than that</p>
           </section>
           <section>
             <h2>Publication rules</h2>
@@ -429,8 +433,8 @@
               <li class="fragment">It is curatorially approved</li>
               <li class="fragment">&hellip; and the Offer is within its Publication window</li>
               <li class="fragment">&hellip; or it's about to be</li>
-              <li class="fragment">Actually it's a bit more complex than that</li>
             </ul>
+            <p class="fragment">Actually it's a bit more complex than that</p>
           </section>
           <section>
             <h2>Publication rules</h2>
@@ -440,38 +444,73 @@
               <li class="fragment">&hellip; and it has an Offer that is approved</li>
               <li class="fragment">&hellip; <em>or</em> the Offer is within its Publication window</li>
               <li class="fragment">&hellip; or it's about to be</li>
-              <li class="fragment">Actually it's a bit more complex than that</li>
             </ul>
+            <p class="fragment">Actually it's a bit more complex than that</p>
           </section>
           <section>
             <h2>Publication rules</h2>
             <p>It's complicated&hellip;</p>
+            <p class="fragment">&hellip;And potentially expensive</p>
+            <aside class="notes">
+              <ul>
+                <li>Need to not do work on node save to avoid slowing down UI.</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2>Cron &amp; Queues</h2>
-            <!-- @Todo: Reformat this mess. -->
-            <p>On Cron&hellip;</p>
-            <ul>
-              <li>Find assets in window, not published; queue them</li>
-              <li>Find offers of assets in window, not published; queue them</li>
-              <li>Assets not in window; queue them</li>
-              <li>Offers not in window; queue them</li>
-            </ul>
-            <p>On Queue&hellip;</p>
-            <ul>
-              <li>Publish offer</li>
-              <li>Publish related assets</li>
-              <li>Unpublish offers</li>
-              <li>Unpublish related assets</li>
-            </ul>
-          </section>
-          <section>
+            <img src="assets/drupal-indexing.png" alt="The somewhat involved pipeline for indexing content" style="border-radius: 10px;" />
+            <div style="display: none">
+Cron->Publish queue: Ready nodes
+Cron->Publish queue: Related nodes
+Publish queue->Node save: Publish
 
+Cron->Publish queue: Expiring nodes
+Cron->Publish queue: Related nodes
+Publish queue->Node save: Unpublish
+
+Node save->Index queue: Always
+
+opt node published
+  Index queue->Index queue: Prepare data
+  Index queue->Elasticsearch: PUT
+end
+
+opt node unpublished
+  Index queue->Elasticsearch: DELETE
+end
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Hard work is all in cron and queues</li>
+                <li>Format translation all happens in index queue</li>
+                <li>Cron and Queue run very frequently.</li>
+                <li>Node save is cheap!</li>
+                <li>Over-writing to Elasticsearch is cheap</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <p class="bigtext">One more thing&hellip;</p>
+          </section>
+          <section>
+            Rotten Tomatoes goes here
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Serving the API</h2>
+          </section>
+          <section>
+            <div><img src="assets/silex-logo.png" style="height: 200px;" alt="Silex" /></div>
+            <ul>
+              <li>Lightweight microframework</li>
+              <li>Bare-bones, add what you need</li>
+            </ul>
 
           </section>
+
+
         </section>
 
 
