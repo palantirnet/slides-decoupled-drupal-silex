@@ -504,13 +504,85 @@ end
           <section>
             <div><img src="assets/silex-logo.png" style="height: 200px;" alt="Silex" /></div>
             <ul>
-              <li>Lightweight microframework</li>
-              <li>Bare-bones, add what you need</li>
+              <li class="fragment">Lightweight microframework</li>
+              <li class="fragment">Same Kernel/Routing as Symfony (and Drupal 8)</li>
+              <li class="fragment">Bare-bones, add what you need
+                <ul class="fragment">
+                  <li>Elastica (Elasticsearch)</li>
+                  <li>Guzzle (talk back to Ooyala)</li>
+                  <li>Nocarrier/Hal (the API format)</li>
+                </ul>
+              </li>
             </ul>
-
+            <aside class="notes">
+              <ul>
+                <li>No UI at all! (so no Twig)</li>
+              </ul>
+            </aside>
           </section>
-
-
+          <section>
+            <img src="assets/hal-9000.jpg" style="width: 50%; border-radius: 50%;" alt="What are you doing, Drupal?" data-credit="https://www.flickr.com/photos/racatumba/93569705/" />
+            <ul>
+              <li class="fragment">Hypertext Application Language</li>
+              <li class="fragment">IETF Draft</li>
+              <li class="fragment">JSON and XML (but who uses the XML version?)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Silex overview</h2>
+            <img src="assets/silex-dataflow.png" style="border-radius: 10px;" alt="The generic path of data through the system." />
+            <aside class="notes">
+              <ul>
+                <li>Note separation of controller from view listener</li>
+                <li>Note more controllers than just single object</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>The HAL Browser</h2>
+            <img src="assets/hal-browser-index.png" style="border-radius: 10px;" alt="The Hal Browser index page" />
+            <ul>
+              <li>Best thing about HAL!</li>
+              <li>Index resource is all you need, just links from there</li>
+              <li>Many require device ID for filtering</li>
+              <li>Follow link for individual program...</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Program resource</h2>
+            <img src="assets/hal-browser-programme.png" style="border-radius: 10px;" alt="The Hal Browser, programme" />
+            <aside class="notes">
+              <ul>
+                <li>Individual program. Lots of data.</li>
+                <li>Note headers</li>
+                <li>Note caching. Off for dev, easily configurable. Varnish.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Person resource</h2>
+            <img src="assets/hal-browser-person.png" style="border-radius: 10px;" alt="The Hal Browser, person" />
+            <aside class="notes">
+              <ul>
+                <li>Referenced from program.</li>
+                <li>Note links, especially actedIn</li>
+                <li>Goes to collection of Programs, link to those...</li>
+                <li>Navigate the API like a web site = REST!</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>High availability?</h2>
+            <ul>
+              <li class="fragment">Silex is stateless: Spin up several, load balance</li>
+              <li class="fragment">Elasticsearch clusters easily (admin story)</li>
+              <li class="fragment">Varnish caching = FAST!</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          HAGEN, more info here about how great the project was. Data? Metrics?
+          Especially performance.
         </section>
 
 
