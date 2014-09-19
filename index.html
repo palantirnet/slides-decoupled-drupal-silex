@@ -71,12 +71,42 @@
       text-align: center;
     }
 
+    ul.team-list {
+      list-style-type: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    ul.team-list > li {
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-top: 1em;;
+    }
+
+    ul.team-list img {
+      width: 160px;
+
+      height: 160px;
+    }
+
     .reveal ul > ul {
       margin-top: 2em;
     }
 
     .highlight-text {
       color: #9fc855;
+    }
+
+    img.screencap {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+    }
+
+    img.sequence-diagram {
+      border-radius: 10px;
     }
 
     </style>
@@ -120,6 +150,51 @@
         </section>
 
         <section>
+          <section>
+            <h2>Team Palantir</h2>
+            <ul class="team-list">
+              <li>
+                <a href="http://www.palantir.net/about/team/amy-docimo">
+                  <figure>
+                    <img src="assets/palantiri/docimo.jpg" alt="Amy Docimo" />
+                    <figcaption>Amy Docimo</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.palantir.net/about/team/larry-garfield">
+                  <figure>
+                    <img src="assets/palantiri/garfield.jpg" alt="Larry Garfield" />
+                    <figcaption>Larry Garfield</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.palantir.net/about/team/robin-barre">
+                  <figure>
+                    <img src="assets/palantiri/barre.jpg" alt="Robin Barre" />
+                    <figcaption>Robin Barre</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.palantir.net/about/team/beth-binkovitz">
+                  <figure>
+                    <img src="assets/palantiri/binkovitz.jpg" alt="Beth Binkovitz" />
+                    <figcaption>Beth Binkovitz</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.palantir.net/about/team/bec-white">
+                  <figure>
+                    <img src="assets/palantiri/white.jpg" alt="Bec White" />
+                    <figcaption>Bec White</figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </section>
           <section>
             <q>You know what would be an awesome<br />platform for this project?</q>
             <p><img src="assets/drupal-8-logo.svg" class="fragment" style="width: 300px;" alt="Drupal 8 would be perfect!" /></p>
@@ -385,7 +460,80 @@
             <p class="fragment">...Almost</p>
           </section>
           <section>
-            Fill in more here.  Ideally with screen shots.
+            <h2>Content index</h2>
+            <img src="assets/cms-content-index.png" alt="The content index page" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>Imported data</li>
+                <li>Note filters, courtesy Views</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Editorial content</h2>
+            <img src="assets/cms-editorial-index.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>"Application" data, not imported.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Program editing</h2>
+            <img src="assets/cms-program-summary.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>Overview for editors</li>
+                <li>See status of related objects, too.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Program editing</h2>
+            <img src="assets/cms-program-overview-1.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>Big blank space would have video preview if available.</li>
+                <li>Editors change status and QA state</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Program editing</h2>
+            <img src="assets/cms-program-overview-2.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>Rest of page; can see image previews in many sizes</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Program editing</h2>
+            <img src="assets/cms-program-edit-credits.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>Edit credits</li>
+                <li>Select credit source</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Program editing</h2>
+            <img src="assets/cms-program-other.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>This page goes on for a while, lots of fields</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Program editing</h2>
+            <img src="assets/cms-program-synopsis.png" alt="" class="screencap" />
+            <aside class="notes">
+              <ul>
+                <li>Note synopsis source.</li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section>
@@ -459,7 +607,7 @@
           </section>
           <section>
             <h2>Cron &amp; Queues</h2>
-            <img src="assets/drupal-indexing.png" alt="The somewhat involved pipeline for indexing content" style="border-radius: 10px;" />
+            <img src="assets/drupal-indexing.png" alt="The somewhat involved pipeline for indexing content" class="sequence-diagram" />
             <div style="display: none">
 Cron->Publish queue: Ready nodes
 Cron->Publish queue: Related nodes
@@ -530,7 +678,21 @@ end
           </section>
           <section>
             <h2>Silex overview</h2>
-            <img src="assets/silex-dataflow.png" style="border-radius: 10px;" alt="The generic path of data through the system." />
+            <img src="assets/silex-dataflow.png" alt="The generic path of data through the system."  class="sequence-diagram" />
+            <div style="display: none">
+Client->+Kernel: Request
+Kernel->+Controller: Routing
+Controller->+ESRepository: Load
+ESRepository->-Controller:
+Controller->+Formatter: toHal()
+Formatter->-Controller:
+Controller->-Kernel: Return
+Kernel->+View Listener:
+View Listener->View Listener: Render to Response (JSON or XML)
+View Listener->View Listener: HTTP caching
+View Listener->-Kernel:
+Kernel->-Client:
+            </div>
             <aside class="notes">
               <ul>
                 <li>Note separation of controller from view listener</li>
@@ -540,7 +702,7 @@ end
           </section>
           <section>
             <h2>The HAL Browser</h2>
-            <img src="assets/hal-browser-index.png" style="border-radius: 10px;" alt="The Hal Browser index page" />
+            <img src="assets/hal-browser-index.png" alt="The Hal Browser index page" class="screencap" />
             <ul>
               <li>Best thing about HAL!</li>
               <li>Index resource is all you need, just links from there</li>
@@ -550,7 +712,7 @@ end
           </section>
           <section>
             <h2>Program resource</h2>
-            <img src="assets/hal-browser-programme.png" style="border-radius: 10px;" alt="The Hal Browser, programme" />
+            <img src="assets/hal-browser-programme.png" alt="The Hal Browser, program" class="screencap" />
             <aside class="notes">
               <ul>
                 <li>Individual program. Lots of data.</li>
@@ -561,7 +723,7 @@ end
           </section>
           <section>
             <h2>Person resource</h2>
-            <img src="assets/hal-browser-person.png" style="border-radius: 10px;" alt="The Hal Browser, person" />
+            <img src="assets/hal-browser-person.png" alt="The Hal Browser, person" class="screencap" />
             <aside class="notes">
               <ul>
                 <li>Referenced from program.</li>
