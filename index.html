@@ -450,7 +450,39 @@
               <li class="fragment">Cheat: POST-only, no REST</li>
               <li class="fragment">3 page callbacks, common code</li>
               <li class="fragment">Vanilla Drupal</li>
+              <li class="fragment">Http Basic (over SSL) (simplehttpauth)</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Modified simplehttp_auth to be path-based, not role based</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p class="bigtext">One more thing&hellip;</p>
+            <aside class="notes">
+              <ul>
+                <li>Incoming data often incomplete</li>
+                <li>Need 3rd party in many cases</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <div><img src="assets/rottentomatoes-logo.svg" alt="Rotten Tomatoes" data-credit="http://en.wikipedia.org/wiki/File:Rt-logo.svg" /></div>
+            <ul>
+              <li class="fragment">Guzzle</li>
+              <li class="fragment"><a href="https://github.com/palantirnet/rottentomatoes">Guzzle lib</a> for Rotten Tomatoes</li>
+              <li class="fragment">Rotten Tomatoes <a href="https://www.drupal.org/project/rottentomatoes">module</a></li>
+              <li class="fragment">Map nodes by IMDB ID</li>
+              <li class="fragment">Refetch periodically</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Movies and Comments</li>
+                <li>Merge nodes on export</li>
+                <li>Expose comments to API directly</li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section>
@@ -638,12 +670,6 @@ end
               </ul>
             </aside>
           </section>
-          <section>
-            <p class="bigtext">One more thing&hellip;</p>
-          </section>
-          <section>
-            Rotten Tomatoes goes here
-          </section>
         </section>
         <section>
           <section>
@@ -703,12 +729,14 @@ Kernel->-Client:
           <section>
             <h2>The HAL Browser</h2>
             <img src="assets/hal-browser-index.png" alt="The Hal Browser index page" class="screencap" />
-            <ul>
-              <li>Best thing about HAL!</li>
-              <li>Index resource is all you need, just links from there</li>
-              <li>Many require device ID for filtering</li>
-              <li>Follow link for individual program...</li>
-            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Best thing about HAL!</li>
+                <li>Index resource is all you need, just links from there</li>
+                <li>Many require device ID for filtering</li>
+                <li>Follow link for individual program...</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2>Program resource</h2>
