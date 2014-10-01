@@ -60,6 +60,13 @@
       margin: auto;
     }
 
+    div.horiz-columns {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+    }
+
     ul.horiz-list {
       display: flex;
       align-items: flex-start;
@@ -162,27 +169,29 @@
           </section>
           <section>
             <h2>CMS for OTT Solution</h2>
-            <img src="assets/system.png" alt="This is what we need to build" style="width: 350px; float: right;" />
-            <ul>
-            <li class="fragment">Support for structured metadata</li>
-            <li class="fragment">UI to manage metadata</li>
-            <li class="fragment">Publishing workflow</li>
-            <li class="fragment">Curate content
+            <div class="horiz-columns">
+              <img src="assets/system.png" alt="This is what we need to build" style="width: 350px; float: right;" />
               <ul>
-                <li>Lists, Collections</li>
-                <li>Banners (Hero)</li>
-                <li>Homepage and lists of lists</li>
+                <li class="fragment">Support for structured metadata</li>
+                <li class="fragment">UI to manage metadata</li>
+                <li class="fragment">Publishing workflow</li>
+                <li class="fragment">Curate content
+                  <ul>
+                    <li>Lists, Collections</li>
+                    <li>Banners (Hero)</li>
+                    <li>Homepage and lists of lists</li>
+                  </ul>
+                </li>
+                <li class="fragment">Data sync with ooyala backlot</li>
+                <li class="fragment">APIs that work at scale
+                  <ul>
+                    <li>Thousands of movies</li>
+                    <li>Tens of Thousands of users</li>
+                    <li>Support website and applications</li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-            <li class="fragment">Data sync with ooyala backlot</li>
-            <li class="fragment">APIs that work at scale
-              <ul>
-                <li>Thousands of movies</li>
-                <li>Tens of Thousands of users</li>
-                <li>Support website and applications</li>
-              </ul>
-            </li>
-            </ul>
+            </div>
           </section>
         </section>
 
