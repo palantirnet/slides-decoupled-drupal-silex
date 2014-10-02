@@ -78,6 +78,10 @@
       text-align: center;
     }
 
+    .horiz-columns.centered {
+      align-items: center;
+    }
+
     ul.team-list {
       list-style-type: none;
       display: flex;
@@ -121,9 +125,10 @@
       background: #fff;
     }
 
-  .device-list img {
-    padding: 10px;
-  }
+    .device-list img {
+      padding: 10px;
+    }
+
 
     </style>
 
@@ -155,11 +160,7 @@
             <li>Sr. Solutions Architect, <a href="http://www.ooyala.com"><img src="assets/ooyala-logo.png" alt="Ooyala Pays me, too!" style="width: 250px; vertical-align: -60%;" /></a></li>
           </ul>
         </section>
-
-        <!-- Hagen, fill in slides as more section tags in this area. Nest a section inside a section to get the "down" effect. -->
-
         <section>
-          <!-- Hagen: fill in a description here of Ooyala and what they do, and what we were trying to accomplish in this specific case. Only a little sales-pitch-y. :-) -->
           <section>
               <h2>About <img src="assets/ooyala-logo.png" alt="Ooyala Pays me, too!" style="width: 350px; vertical-align: -60%;"/></h2>
               <ul>
@@ -178,7 +179,7 @@
           </section>
           <section>
             <h2>CMS for OTT Solution</h2>
-            <div class="horiz-columns">
+            <div class="horiz-columns centered">
               <img src="assets/system.png" alt="This is what we need to build" style="width: 350px; float: right;" />
               <ul>
                 <li class="fragment">Support for structured metadata</li>
@@ -321,7 +322,7 @@
           </section>
           <section>
             <div class="horiz-flowchart">
-              <div>Source XML</div>
+              <div><img src="assets/primary_source_xml.svg" style="height: 200px;" alt="XML file" data-credit="https://openclipart.org/detail/201016/primary_source_xml-by-dannya" /></div>
               <div class="fragment">=></div>
               <div class="fragment"><img  src="assets/druplicon.svg" style="height: 200px;" alt="Drupal 7" /></div>
               <div class="fragment">=></div>
@@ -329,7 +330,7 @@
               <div class="fragment">=></div>
               <div class="fragment"><img src="assets/silex-logo.png" style="height: 200px;" alt="Silex" /></div>
               <div class="fragment">=></div>
-              <div class="fragment">Client applications</div>
+              <div class="fragment"><img src="assets/mobile-phone.svg" style="height: 200px;" alt="Client applications" data-credit="https://openclipart.org/detail/77887/android-phone-by-shokunin" /></div>
             </div>
           </section>
         </section>
@@ -339,85 +340,13 @@
             <p class="fragment bigtext">(aka The Nodes)</p>
           </section>
           <section>
-            <h2>Core Domain model</h2>
-            <ul class="horiz-list">
-              <li class="fragment">
-                <h3>Program</h3>
-                <ul>
-                  <li>Movie</li>
-                  <li>Episode</li>
-                  <li>Useful data</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>Offer</h3>
-                <ul>
-                  <li>Buy this</li>
-                  <li>Refs programs</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>Asset</h3>
-                <ul>
-                  <li>Video data</li>
-                  <li>File in DAM</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>Channel</h3>
-                <ul>
-                  <li>EPG records</li>
-                  <li>Just categorization</li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Extended domain model</h2>
-            <ul class="horiz-list">
-              <li class="fragment">
-                <h3>Unadorned List</h3>
-                <ul>
-                  <li>Curated set of Programs</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>Collection</h3>
-                <ul>
-                  <li>Lists with extra images/clips</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>Genres</h3>
-                <ul>
-                  <li>More than tags</li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Application domain model</h2>
-            <ul class="horiz-list">
-              <li class="fragment">
-                <h3>Hero</h3>
-                <ul>
-                  <li>"Hero" image in UI</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>String</h3>
-                <ul>
-                  <li>TOS</li>
-                  <li>Instructions</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                <h3>Supported device</h3>
-                <ul>
-                  <li>Access control</li>
-                  <li>Filtering</li>
-                </ul>
-              </li>
+            <h2>Major content</h2>
+            <ul>
+              <li>Program</li>
+              <li>Asset</li>
+              <li>Offer</li>
+              <li>Collections</li>
+              <li style="margin-top: 1em;">Various app-specific content</li>
             </ul>
           </section>
         </section>
