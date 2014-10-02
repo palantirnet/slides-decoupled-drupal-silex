@@ -60,6 +60,13 @@
       margin: auto;
     }
 
+    div.horiz-columns {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+    }
+
     ul.horiz-list {
       display: flex;
       align-items: flex-start;
@@ -118,7 +125,7 @@
         <section>
           <h2>Decoupled Drupal with Silex</h2>
           <p>
-            <small>Presented by <a href="http://www.garfieldtech.com/">Larry Garfield</a> (<a href="http://twitter.com/Crell">@Crell</a>) / <a href="HAGEN FILL IN A LINK HERE">Hagen Last</a> (<a href="http://twitter.com/HAGEN, FILL THIS IN">@HAGEN IF YOU WANT IT</a>)</small>
+            <small>Presented by <a href="http://www.garfieldtech.com/">Larry Garfield</a> (<a href="http://twitter.com/Crell">@Crell</a>) / Hagen Last</small>
           </p>
         </section>
         <section>
@@ -134,9 +141,9 @@
         </section>
         <section>
           <h2>Hagen Last</h2>
-          <img src="assets/ooyala-logo.png" alt="Ooyala Pays me, too!" style="width: 300px; float: right;" />
+          
           <ul>
-            <li>Stuff about Hagen here</li>
+            <li>Sr. Solutions Architect, <a href="http://www.ooyala.com"><img src="assets/ooyala-logo.png" alt="Ooyala Pays me, too!" style="width: 250px; vertical-align: -60%;" /></a></li>
           </ul>
         </section>
 
@@ -145,7 +152,51 @@
         <section>
           <!-- Hagen: fill in a description here of Ooyala and what they do, and what we were trying to accomplish in this specific case. Only a little sales-pitch-y. :-) -->
           <section>
-            <h2>Videos for Apps</h2>
+              <h2>About <img src="assets/ooyala-logo.png" alt="Ooyala Pays me, too!" style="width: 350px; vertical-align: -60%;"/></h2>
+              <ul>
+                <li>Leading OVP provider</li>
+                <li>Founded in 2007</li>
+                <li>300+ employees worldwide</li>
+                <li>Global footprint of 200M unique users in 130 countries</li>
+                <li>Ooyala works with the most successful broadcast and media companies in the world</li>
+              </ul>
+          </section>
+          <section>
+            <h2>Ooyala Customers</h2>
+            <figure>
+              <img src="assets/ooyalaCustomers.png" alt="Major Media Companies" />
+            </figure>
+          </section>
+          <section>
+            <h2>CMS for OTT Solution</h2>
+            <div class="horiz-columns">
+              <img src="assets/system.png" alt="This is what we need to build" style="width: 350px; float: right;" />
+              <ul>
+                <li class="fragment">Support for structured metadata</li>
+                <li class="fragment">UI to manage metadata</li>
+                <li class="fragment">Publishing workflow</li>
+                <li class="fragment">Curate content
+                  <ul>
+                    <li>Lists, Collections</li>
+                    <li>Banners (Hero)</li>
+                    <li>Homepage and lists of lists</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>...and</h2>
+              <ul>
+                <li class="fragment">Data sync with ooyala backlot</li>
+                <li class="fragment">APIs that work at scale
+                  <ul>
+                    <li>Thousands of movies</li>
+                    <li>Tens of Thousands of users</li>
+                    <li>Support website and applications</li>
+                  </ul>
+                </li>
+              </ul>
           </section>
         </section>
 
@@ -771,8 +822,17 @@ Kernel->-Client:
           </section>
         </section>
         <section>
-          HAGEN, more info here about how great the project was. Data? Metrics?
-          Especially performance.
+          <h2>Result</h2>
+          <ul>
+            <li>Highly reliable system with a library of thousands of assets.</li>
+            <li>Thousands of subscribers have joined the service in the past year of service.</li>
+            <li>The architecture is very flexible and robust, allowing addition of new features to further enhance the offering.</li>
+          </ul>
+          <aside class="notes">
+              <ul>
+                <li>Not aware of any downtime of the service</li>
+              </ul>
+          </aside>
         </section>
 
 
